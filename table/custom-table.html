@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microlight &mdash; Table</title>
+    <!-- Icon Microlight -->
+    <link rel="shortcut icon" href="/assets/img/brand/icon.svg" type="image/x-icon">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/css/microlight.css">
+
+    <!-- CSS Libraries -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/bs5/dt-1.12.1/r-2.3.0/datatables.min.css" />
+
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle text-primary-500">
+            <i class="bi bi-list" id="header-toggle"></i>
+        </div>
+
+        <div class="header__content">
+            <!-- Search button -->
+            <button type="button" class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3"
+                data-bs-toggle="modal" data-bs-target="#modalSearch">
+                <i class='bx bx-search'></i>
+            </button>
+            <!-- Notification button-->
+            <button type="button" class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3"
+                id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                <i class='bx bx-notification'></i>
+            </button>
+            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="dropdownMenuOffset">
+                <div class="card">
+                    <div class="card-header border-0 bg-transparent">
+                        <div class="float-start pe-5">
+                            <h6 class="fw-bold">Notifications</h6>
+                        </div>
+                        <div class="float-end">
+                            <a href="#" class="md-text-rg ps-5 text-secondary-500"> Mark all read</a>
+                        </div>
+                    </div>
+                    <div class="card-body notif">
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-code-slash icon-card-notification left text-white text-bg-primary-50 text-primary-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Template update is
+                                    available
+                                    now!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">17 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-emoji-smile icon-card-notification left text-white text-bg-warning-100 text-warning-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Welcome to Microlight
+                                    template!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">Yesterday</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-hdd icon-card-notification left text-white text-bg-danger-100 text-danger-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Low disk space. Let's
+                                    clean it!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">18 Hours Ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-0">
+                        <a href="#" class="md-text-rg"> View all</a>
+                    </div>
+                </div>
+            </ul>
+            <!-- Messages button -->
+            <button class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3" id="dropdownMenuOffsetNew"
+                data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                <i class='bx bx-message-square-detail'></i>
+            </button>
+            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="dropdownMenuOffsetNew">
+                <div class="card">
+                    <div class="card-header border-0 bg-transparent">
+                        <div class="float-start pe-5">
+                            <h6 class="fw-bold">Messages</h6>
+                        </div>
+                        <div class="float-end">
+                            <a href="#" class="md-text-rg ps-5 text-secondary-500"> Mark all as read</a>
+                        </div>
+                    </div>
+                    <div class="card-body notif">
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <img src="/assets/img/avatar/avatar-boy.png" alt="avatar" class="w-100">
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3 mb-5">Jhon doe</a><br>
+                                <span class="ps-3">Helo bro, how are you today ? 😊</span>
+                                <p class="sm-text-rg text-secondary-500 ps-3">17 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <img src="/assets/img/avatar/avatar-girl.png" alt="avatar" class="w-100">
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3 mb-5">Elfira</a><br>
+                                <span class="ps-3">Hey baby ❤️</span>
+                                <p class="sm-text-rg text-secondary-500 ps-3">12 Hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-0">
+                        <a href="#" class="md-text-rg"> View all</a>
+                    </div>
+                </div>
+            </ul>
+            <!-- Profile link -->
+            <a href="#" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                <img src="/assets/img/avatar/avatar-2.jpg" alt="avatar">
+                <ul class="dropdown-menu border-0 shadow-lg rounded ps-2 pe-5" aria-labelledby="dropdownProfile">
+                    <li>
+                        <span class="dropdown-header fw-bold">👋 Hey, Fin</span>
+                    </li>
+                    <li class="align-middle">
+                        <a class="dropdown-item" href="/account/profile.html"> Profil</a>
+                    </li>
+                    <li class="align-middle">
+                        <a class="dropdown-item" href="/account/activities.html">Activities</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/account/settings.html"> Setting</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-danger fw-bold" href="/pages/login.html">Logout</a>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <div class="l-navbar bg-sidenav-primary-fill" id="nav-bar">
+        <nav class="nav nav-content">
+            <div>
+                <!-- Brand here -->
+                <a href=" /" class="nav__logo">
+                    <img src="/assets/img/brand/logo-light.svg" alt="brand" class="nav__logo-icon">
+                </a>
+
+                <div class="nav__list">
+
+                    <a href="/" class="nav__link">
+                        <i class='bx bx-grid-alt nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-components" data-bs-toggle="collapse"
+                        data-bs-target="#flushComponents" aria-expanded="false" aria-controls="flushComponents">
+                        <i class='bx bx-layer nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Components</span>
+
+                    </a>
+                    <div id="flushComponents" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-components" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body modal-dialog-scrollable">
+                            <div class="d-flex flex-column" id="accordion-container-components">
+                                <span class="dropdown-header p-2 text-secondary-400">Custom components</span>
+                                <a href="/components/accordion.html" class="accordion-items p-2">Accordion</a>
+                                <a href="/components/alert.html" class="accordion-items p-2">Alert</a>
+                                <a href="/components/badge.html" class="accordion-items p-2">Badge</a>
+                                <a href="/components/breadcrumb.html" class="accordion-items p-2">Breadcrumb</a>
+                                <a href="/components/buttons.html" class="accordion-items p-2">Buttons</a>
+                                <a href="/components/card.html" class="accordion-items p-2">Card</a>
+                                <a href="/components/carousel.html" class="accordion-items p-2">Carousel</a>
+                                <a href="/components/collapse.html" class="accordion-items p-2">Collapse</a>
+                                <a href="/components/dropdown.html" class="accordion-items p-2">Dropdown</a>
+                                <a href="/components/form.html" class="accordion-items p-2">Form</a>
+                                <a href="/components/list-group.html" class="accordion-items p-2">List Group</a>
+                                <a href="/components/media-object.html" class="accordion-items p-2">Media Object</a>
+                                <a href="/components/modal.html" class="accordion-items p-2">Modal</a>
+                                <a href="/components/nav.html" class="accordion-items p-2">Nav</a>
+                                <a href="/components/navbar.html" class="accordion-items p-2">Navbar</a>
+                                <a href="/components/pagination.html" class="accordion-items p-2">Pagination</a>
+                                <a href="/components/popovers.html" class="accordion-items p-2">Popover</a>
+                                <a href="/components/progress.html" class="accordion-items p-2">Progress</a>
+                                <a href="/components/table.html" class="accordion-items p-2">Table</a>
+                                <a href="/components/toasts.html" class="accordion-items p-2">Toasts</a>
+                                <a href="/components/tooltips.html" class="accordion-items p-2">Tooltip</a>
+                                <a href="/components/typography.html" class="accordion-items p-2">Typography</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-utilities" data-bs-toggle="collapse"
+                        data-bs-target="#flushUtilities" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-wrench nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Utilities</span>
+
+                    </a>
+                    <div id="flushUtilities" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-utilities" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-utilities">
+                                <span class="dropdown-header p-2 text-secondary-400">Custom utilities</span>
+                                <a href="/utilities/color.html" class="accordion-items p-2">Color</a>
+                                <a href="/utilities/text.html" class="accordion-items p-2">Text</a>
+                                <a href="/utilities/border.html" class="accordion-items p-2">Border</a>
+                                <a href="/utilities/elevation.html" class="accordion-items p-2">Elevation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-pages" data-bs-toggle="collapse"
+                        data-bs-target="#flushPages" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-folder nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Pages</span>
+
+                    </a>
+                    <div id="flushPages" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-pages" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-pages">
+                                <span class="dropdown-header p-2 text-secondary-400">Auth screens</span>
+                                <a href="#" class="accordion-items p-2">Login</a>
+                                <a href="#" class="accordion-items p-2">Register</a>
+                                <a href="#" class="accordion-items p-2">Forgot password</a>
+                                <a href="#" class="accordion-items p-2">Reset password</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Starter screens</span>
+                                <a href="/pages/blank.html" class="accordion-items p-2">Blank pages</a>
+                                <a href="/pages/layout-default.html" class="accordion-items p-2">Layout Default</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Errors screens</span>
+                                <a href="/pages/503.html" class="accordion-items p-2">503</a>
+                                <a href="/pages/403.html" class="accordion-items p-2">403</a>
+                                <a href="/pages/404.html" class="accordion-items p-2">404</a>
+                                <a href="/pages/500.html" class="accordion-items p-2">500</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Form screens</span>
+                                <a href="#" class="accordion-items p-2">Advanced Form</a>
+                                <a href="/pages/editor.html" class="accordion-items p-2">Editor</a>
+                                <a href="/pages/validation.html" class="accordion-items p-2">Validation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <a href="/charts" class="nav__link">
+                        <i class='bx bx-bar-chart-alt-2 nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Charts</span>
+                    </a>
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link active" id="flush-table" data-bs-toggle="collapse"
+                        data-bs-target="#flushTable" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-table nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Table</span>
+
+                    </a>
+                    <div id="flushTable" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-table" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-table">
+                                <span class="dropdown-header p-2 text-secondary-400">Table screens</span>
+                                <a href="/table" class="accordion-items p-2 active">Data table</a>
+                                <a href="custom-table.html" class="accordion-items p-2">Custom table</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-log-out nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Log Out</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Container wrapper -->
+    <div class="main-content">
+        <!-- Search -->
+        <div class="modal fade modal-search" id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-xxl-down">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <input type="text" placeholder="Search here" class="center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start content here -->
+        <div class="header__page d-flex align-items-left align-items-md-center flex-column flex-md-row pt-5 mb-4">
+            <div>
+                <h2 class="fw-bold">Custom Table</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb sm-text-rg">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item">Data Table</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- DataTales Example -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Table Export
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="dataTableExport" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="md-text-rg text-secondary-500 align-middle tb-vh-75">
+                                <td>Eton</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td>2011/04/25</td>
+                                <td class="fw-bold text-secondary-900">$320,800 🤑</td>
+                            </tr>
+                            <tr class="md-text-rg text-secondary-500 align-middle tb-vh-75">
+                                <td>Suden</td>
+                                <td>UX Designer</td>
+                                <td>Twitter</td>
+                                <td>21</td>
+                                <td>2019/04/25</td>
+                                <td class="fw-bold text-secondary-900">$920,800 🤑</td>
+                            </tr>
+                            <tr class="md-text-rg text-secondary-500 align-middle tb-vh-75">
+                                <td>Fin</td>
+                                <td>Fullstack UI/UX Designer</td>
+                                <td>Google</td>
+                                <td>22</td>
+                                <td>2022/04/25</td>
+                                <td class="fw-bold text-secondary-900">$1020,800 🤑</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Table action simple -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Simple Table
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="bg-light text-uppercase">
+                            <tr class="tb-vh-25 xs-text-md">
+                                <th scope="col">invoice id</th>
+                                <th scope="col">start date</th>
+                                <th scope="col">end date</th>
+                                <th scope="col">total shift</th>
+                                <th scope="col">invoice amount</th>
+                                <th scope="col">status</th>
+                                <th scope="col">action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-middle">
+                            <tr class="tb-vh-100">
+                                <th scope="row">#1246</th>
+                                <td>14/09/2022</td>
+                                <td>15/09/2022</td>
+                                <td>2 shifts</td>
+                                <td>$500,00</td>
+                                <td>
+                                    <span
+                                        class="badge rounded-pill text-bg-primary-50 text-uppercase ps-3 pe-3">paid</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-outline-light btn-md shadow-sm text-secondary fw-bold"><i
+                                            class="bi bi-coin pe-2"></i>Open
+                                        dispute</a>
+                                    <a href="#" class="btn btn-primary shadow-sm fw-bold btn-md"><i
+                                            class="bi bi-cash-stack pe-2"></i>Pay</a>
+                                </td>
+                            </tr>
+                            <tr class="tb-vh-100">
+                                <th scope="row">#1246</th>
+                                <td>14/09/2022</td>
+                                <td>15/09/2022</td>
+                                <td>2 shifts</td>
+                                <td>$500,00</td>
+                                <td>
+                                    <span
+                                        class="badge rounded-pill text-bg-primary-50 text-uppercase ps-3 pe-3">paid</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-outline-light btn-md shadow-sm text-secondary fw-bold"><i
+                                            class="bi bi-coin pe-2"></i>Open
+                                        dispute</a>
+                                    <a href="#" class="btn btn-primary shadow-sm fw-bold btn-md"><i
+                                            class="bi bi-cash-stack pe-2"></i>Pay</a>
+                                </td>
+                            </tr>
+                            <tr class="tb-vh-100">
+                                <th scope="row">#1246</th>
+                                <td>14/09/2022</td>
+                                <td>15/09/2022</td>
+                                <td>2 shifts</td>
+                                <td>$500,00</td>
+                                <td>
+                                    <span
+                                        class="badge rounded-pill text-bg-primary-50 text-uppercase ps-3 pe-3">paid</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-outline-light btn-md shadow-sm text-secondary fw-bold"><i
+                                            class="bi bi-coin pe-2"></i>Open
+                                        dispute</a>
+                                    <a href="#" class="btn btn-primary shadow-sm fw-bold btn-md"><i
+                                            class="bi bi-cash-stack pe-2"></i>Pay</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table action simple -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Table payment
+                <a href="#" class="btn btn-outline-light btn-md shadow-sm text-secondary-700 fw-bold float-end"><i
+                        class="bi bi-plus pe-2"></i>Add user</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <thead class="text-uppercase">
+                            <tr class="tb-vh-25 xs-text-md">
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Email Address</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Property</th>
+                                <th scope="col">Revenue</th>
+                                <th scope="col">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-middle">
+                            <tr class="tb-vh-50">
+                                <th scope="row">Jone Cooper</th>
+                                <td>jonecooper@gmail.com</td>
+                                <td>
+                                    <span
+                                        class="badge rounded-pill text-bg-primary-50 text-uppercase ps-3 pe-3">paid</span>
+                                </td>
+                                <td>(684)555-0102</td>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1645323927916-969f9f314ba3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80"
+                                        alt="img" class="img-table">
+                                </td>
+                                <td>$875,00</td>
+                                <td>
+                                    <div class="progress" style="height: 9px;">
+                                        <div class="progress-bar rounded-pill" role="progressbar" style="width: 50%;"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="ps-3 text-secondary-500">
+                                    <i class="bi bi-three-dots mt-4"></i>
+                                </td>
+                            </tr>
+                            <tr class="tb-vh-50">
+                                <th scope="row">fin</th>
+                                <td>fin@gmail.com</td>
+                                <td>
+                                    <span
+                                        class="badge rounded-pill text-bg-success-50 text-uppercase ps-3 pe-3">completed</span>
+                                </td>
+                                <td>(684)555-0102</td>
+                                <td>
+                                    <img src="https://images.unsplash.com/photo-1645323927924-92c23d9273f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80"
+                                        alt="img" class="img-table">
+                                </td>
+                                <td>$875,00</td>
+                                <td>
+                                    <div class="progress" style="height: 9px;">
+                                        <div class="progress-bar-warning text-bg-success-500 rounded-pill"
+                                            role="progressbar" style="width: 100%;" aria-valuenow="100"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="ps-3 text-secondary-500">
+                                    <i class="bi bi-three-dots mt-4"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabele user registration -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6 class="fw-bold">User registration</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead class="text-capitalize">
+                                    <tr class="tb-vh-25 md-text-md">
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email Address</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle">
+                                    <tr class="tb-vh-50 sm-text-rg">
+                                        <th scope="row">Jone Cooper</th>
+                                        <td>jonecooper@gmail.com</td>
+                                        <td>
+                                            <div class="bullet text-success-500"></div> online
+                                        </td>
+                                        <td>
+                                            <div data-bs-toggle="modal" data-bs-target="#confirmModal">
+                                                <button class="btn btn-outline-light shadow-xs btn-sm"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Delete user"><i
+                                                        class="bi bi-trash3 ps-2 pe-2 pt-1 pb-1 text-danger-500"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-light shadow-xs btn-sm"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Block user"><i
+                                                    class="bi bi-dash-circle ps-2 pe-2 pt-1 pb-1 text-warning-500"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-vh-50 sm-text-rg">
+                                        <th scope="row">eton</th>
+                                        <td>eton@gmail.com</td>
+                                        <td>
+                                            <div class="bullet text-secondary-300"></div> offline
+                                        </td>
+                                        <td>
+                                            <div data-bs-toggle="modal" data-bs-target="#confirmModal">
+                                                <button class="btn btn-outline-light shadow-xs btn-sm"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Delete user"><i
+                                                        class="bi bi-trash3 ps-2 pe-2 pt-1 pb-1 text-danger-500"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-light shadow-xs btn-sm"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Block user"><i
+                                                    class="bi bi-dash-circle ps-2 pe-2 pt-1 pb-1 text-warning-500"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6 class="fw-bold">User progress</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead class="text-capitalize">
+                                    <tr class="tb-vh-25 md-text-md">
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email Address</th>
+                                        <th scope="col">Progress</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle">
+                                    <tr class="tb-vh-50 sm-text-rg">
+                                        <th scope="row">Jone Cooper</th>
+                                        <td>jonecooper@gmail.com</td>
+                                        <td>
+                                            <div class="progress" style="height: 9px;">
+                                                <div class="progress-bar rounded-pill" role="progressbar"
+                                                    style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button
+                                                class="btn btn-outline-light shadow-xs btn-sm text-secondary-700 fw-bold"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Detail user">Detail</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="tb-vh-50 sm-text-rg">
+                                        <th scope="row">eton</th>
+                                        <td>eton@gmail.com</td>
+                                        <td>
+                                            <div class="progress" style="height: 9px;">
+                                                <div class="progress-bar rounded-pill bg-danger" role="progressbar"
+                                                    style="width: 20%;" aria-valuenow="20" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button
+                                                class="btn btn-outline-light shadow-xs btn-sm text-secondary-700 fw-bold"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Detail user">Detail</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal area here -->
+
+    <!-- Modal confirmation delete -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content custom p-2">
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="float-start">
+                            <i class="bi bi-exclamation-circle text-danger pe-4"></i>
+                        </div>
+                        <div class="float-end">
+                            <h5 class="fw-bold text-secondary-700">Are you sure?</h5>
+                            <span class="md-text-rg text-secondary-500">Warning! Deleting this User is
+                                permanent,This operation can not
+                                be
+                                reversed.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light btn-md text-secondary-500"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger btn-md">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="float-start">
+            Copyright &copy; 2022 <div class="bullet"></div> Design with ❤️ By <a
+                href="https://designwitharifin.netlify.app/">designwitharifin</a>
+        </div>
+        <div class="float-end">
+            v1.0.0
+        </div>
+    </footer>
+    <!-- General JS Scripts -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Template JS FIle -->
+    <script src="/node_modules/bootstrap/dist/js/main.js"></script>
+
+    <!-- Js Libraries -->
+    <script src="/assets/js/apexchrats.js"></script>
+    <script src="/assets/js/moment.min.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/r-2.3.0/datatables.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/datatables.min.js"></script>
+    <script>
+        // Collapse sidebar accordion container components 
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-components').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-components').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-utilities').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-utilities').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-pages').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-pages').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#dataTableExport').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }
+                ]
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microlight &mdash; Layout Default</title>
+    <!-- Icon Microlight -->
+    <link rel="shortcut icon" href="/assets/img/brand/icon.svg" type="image/x-icon">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/css/microlight.css">
+
+    <!-- CSS Libraries -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body id="body-pd">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__toggle text-primary-500">
+            <i class="bi bi-list" id="header-toggle"></i>
+        </div>
+
+        <div class="header__content">
+            <!-- Search button -->
+            <button type="button" class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3"
+                data-bs-toggle="modal" data-bs-target="#modalSearch">
+                <i class='bx bx-search'></i>
+            </button>
+            <!-- Notification button-->
+            <button type="button" class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3"
+                id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                <i class='bx bx-notification'></i>
+            </button>
+            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="dropdownMenuOffset">
+                <div class="card">
+                    <div class="card-header border-0 bg-transparent">
+                        <div class="float-start pe-5">
+                            <h6 class="fw-bold">Notifications</h6>
+                        </div>
+                        <div class="float-end">
+                            <a href="#" class="md-text-rg ps-5 text-secondary-500"> Mark all read</a>
+                        </div>
+                    </div>
+                    <div class="card-body notif">
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-code-slash icon-card-notification left text-white text-bg-primary-50 text-primary-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Template update is
+                                    available
+                                    now!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">17 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-emoji-smile icon-card-notification left text-white text-bg-warning-100 text-warning-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Welcome to Microlight
+                                    template!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">Yesterday</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-hdd icon-card-notification left text-white text-bg-danger-100 text-danger-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Low disk space. Let's
+                                    clean it!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">18 Hours Ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-0">
+                        <a href="#" class="md-text-rg"> View all</a>
+                    </div>
+                </div>
+            </ul>
+            <!-- Messages button -->
+            <button class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3" id="dropdownMenuOffsetNew"
+                data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                <i class='bx bx-message-square-detail'></i>
+            </button>
+            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="dropdownMenuOffsetNew">
+                <div class="card">
+                    <div class="card-header border-0 bg-transparent">
+                        <div class="float-start pe-5">
+                            <h6 class="fw-bold">Messages</h6>
+                        </div>
+                        <div class="float-end">
+                            <a href="#" class="md-text-rg ps-5 text-secondary-500"> Mark all as read</a>
+                        </div>
+                    </div>
+                    <div class="card-body notif">
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <img src="/assets/img/avatar/avatar-boy.png" alt="avatar" class="w-100">
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3 mb-5">Jhon doe</a><br>
+                                <span class="ps-3">Helo bro, how are you today ? 😊</span>
+                                <p class="sm-text-rg text-secondary-500 ps-3">17 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <img src="/assets/img/avatar/avatar-girl.png" alt="avatar" class="w-100">
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3 mb-5">Elfira</a><br>
+                                <span class="ps-3">Hey baby ❤️</span>
+                                <p class="sm-text-rg text-secondary-500 ps-3">12 Hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-0">
+                        <a href="#" class="md-text-rg"> View all</a>
+                    </div>
+                </div>
+            </ul>
+            <!-- Profile link -->
+            <a href="#" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                <img src="/assets/img/avatar/avatar-2.jpg" alt="avatar">
+                <ul class="dropdown-menu border-0 shadow-lg rounded ps-2 pe-5" aria-labelledby="dropdownProfile">
+                    <li>
+                        <span class="dropdown-header fw-bold">👋 Hey, Fin</span>
+                    </li>
+                    <li class="align-middle">
+                        <a class="dropdown-item" href="/account/profile.html"> Profil</a>
+                    </li>
+                    <li class="align-middle">
+                        <a class="dropdown-item" href="/account/activities.html">Activities</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/account/settings.html"> Setting</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-danger fw-bold" href="/pages/login.html">Logout</a>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <div class="l-navbar bg-sidenav-primary-fill" id="nav-bar">
+        <nav class="nav nav-content">
+            <div>
+                <!-- Brand here -->
+                <a href="/" class="nav__logo">
+                    <img src="/assets/img/brand/logo-light.svg" alt="brand" class="nav__logo-icon">
+                </a>
+
+                <div class="nav__list">
+
+                    <a href="/" class="nav__link">
+                        <i class='bx bx-grid-alt nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link active" id="flush-components" data-bs-toggle="collapse"
+                        data-bs-target="#flushComponents" aria-expanded="false" aria-controls="flushComponents">
+                        <i class='bx bx-layer nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Components</span>
+
+                    </a>
+                    <div id="flushComponents" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-components" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body modal-dialog-scrollable">
+                            <div class="d-flex flex-column" id="accordion-container-components">
+                                <span class="dropdown-header p-2 text-secondary-400">Custom components</span>
+                                <a href="/components/accordion.html" class="accordion-items p-2">Accordion</a>
+                                <a href="/components/alert.html" class="accordion-items p-2">Alert</a>
+                                <a href="/components/badge.html" class="accordion-items p-2">Badge</a>
+                                <a href="/components/breadcrumb.html" class="accordion-items p-2">Breadcrumb</a>
+                                <a href="/components/buttons.html" class="accordion-items p-2">Buttons</a>
+                                <a href="/components/card.html" class="accordion-items p-2">Card</a>
+                                <a href="/components/carousel.html" class="accordion-items p-2">Carousel</a>
+                                <a href="/components/collapse.html" class="accordion-items p-2">Collapse</a>
+                                <a href="/components/dropdown.html" class="accordion-items p-2">Dropdown</a>
+                                <a href="/components/form.html" class="accordion-items p-2">Form</a>
+                                <a href="/components/list-group.html" class="accordion-items p-2">List Group</a>
+                                <a href="/components/media-object.html" class="accordion-items p-2">Media Object</a>
+                                <a href="/components/modal.html" class="accordion-items p-2">Modal</a>
+                                <a href="/components/nav.html" class="accordion-items p-2">Nav</a>
+                                <a href="/components/navbar.html" class="accordion-items p-2">Navbar</a>
+                                <a href="/components/pagination.html" class="accordion-items p-2">Pagination</a>
+                                <a href="/components/popovers.html" class="accordion-items p-2">Popover</a>
+                                <a href="/components/progress.html" class="accordion-items p-2">Progress</a>
+                                <a href="/components/table.html" class="accordion-items p-2">Table</a>
+                                <a href="/components/toasts.html" class="accordion-items p-2">Toasts</a>
+                                <a href="/components/tooltips.html" class="accordion-items p-2">Tooltip</a>
+                                <a href="/components/typography.html" class="accordion-items p-2">Typography</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-utilities" data-bs-toggle="collapse"
+                        data-bs-target="#flushUtilities" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-wrench nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Utilities</span>
+
+                    </a>
+                    <div id="flushUtilities" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-utilities" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-utilities">
+                                <span class="dropdown-header p-2 text-secondary-400">Custom utilities</span>
+                                <a href="/utilities/color.html" class="accordion-items p-2">Color</a>
+                                <a href="/utilities/text.html" class="accordion-items p-2">Text</a>
+                                <a href="/utilities/border.html" class="accordion-items p-2">Border</a>
+                                <a href="/utilities/elevation.html" class="accordion-items p-2">Elevation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-pages" data-bs-toggle="collapse"
+                        data-bs-target="#flushPages" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-folder nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Pages</span>
+
+                    </a>
+                    <div id="flushPages" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-pages" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-pages">
+                                <span class="dropdown-header p-2 text-secondary-400">Auth screens</span>
+                                <a href="/pages/login.html" class="accordion-items p-2">Login</a>
+                                <a href="/pages/register.html" class="accordion-items p-2">Register</a>
+                                <a href="/pages/forgot-password.html" class="accordion-items p-2">Forgot password</a>
+                                <a href="/pages/reset-password.html" class="accordion-items p-2">Reset password</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Starter screens</span>
+                                <a href="/pages/blank.html" class="accordion-items p-2">Blank pages</a>
+                                <a href="/pages/layout-default.html" class="accordion-items p-2">Layout Default</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Errors screens</span>
+                                <a href="/pages/503.html" class="accordion-items p-2">503</a>
+                                <a href="/pages/403.html" class="accordion-items p-2">403</a>
+                                <a href="/pages/404.html" class="accordion-items p-2">404</a>
+                                <a href="/pages/500.html" class="accordion-items p-2">500</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Form screens</span>
+                                <a href="/pages/editor.html" class="accordion-items p-2">Editor</a>
+                                <a href="/pages/validation.html" class="accordion-items p-2">Validation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <a href="/charts" class="nav__link">
+                        <i class='bx bx-bar-chart-alt-2 nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Charts</span>
+                    </a>
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-table" data-bs-toggle="collapse"
+                        data-bs-target="#flushTable" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-table nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Table</span>
+                    </a>
+                    <div id="flushTable" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-table" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-table">
+                                <span class="dropdown-header p-2 text-secondary-400">Table screens</span>
+                                <a href="/table" class="accordion-items p-2 active">Data table</a>
+                                <a href="/table/custom-table.html" class="accordion-items p-2">Custom table</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-log-out nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Log Out</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Container wrapper -->
+    <div class="main-content">
+        <!-- Search -->
+        <div class="modal fade modal-search" id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-xxl-down">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <input type="text" placeholder="Search here" class="center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start content here -->
+        <div class="header__page d-flex align-items-left align-items-md-center flex-column flex-md-row pt-5 mb-4 mt-5">
+            <div>
+                <h2 class="fw-bold">Alert Page</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb sm-text-rg">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item">Alert</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="fw-bold">Default</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="fw-bold">Background</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary text-bg-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary text-bg-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success text-bg-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger text-bg-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning text-bg-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info text-bg-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light text-bg-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark text-bg-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="fw-bold">Icon Default</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon primary
+                            </div>
+                        </div>
+                        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon secondary
+                            </div>
+                        </div>
+                        <div class="alert alert-success d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon success
+                            </div>
+                        </div>
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon danger
+                            </div>
+                        </div>
+                        <div class="alert alert-warning d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon warning
+                            </div>
+                        </div>
+                        <div class="alert alert-info d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon info
+                            </div>
+                        </div>
+                        <div class="alert alert-light d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon light
+                            </div>
+                        </div>
+                        <div class="alert alert-dark d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon dark
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="fw-bold">Icon Background</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary text-bg-primary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon primary
+                            </div>
+                        </div>
+                        <div class="alert alert-secondary text-bg-secondary d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon secondary
+                            </div>
+                        </div>
+                        <div class="alert alert-success text-bg-success d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon success
+                            </div>
+                        </div>
+                        <div class="alert alert-danger text-bg-danger d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon danger
+                            </div>
+                        </div>
+                        <div class="alert alert-warning text-bg-warning d-flex align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon warning
+                            </div>
+                        </div>
+                        <div class="alert alert-info d-flex text-bg-info align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon info
+                            </div>
+                        </div>
+                        <div class="alert alert-light d-flex text-bg-light align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon light
+                            </div>
+                        </div>
+                        <div class="alert alert-dark d-flex text-bg-dark align-items-center" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-exclamation-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                            <div>
+                                An example alert with an icon dark
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="fw-bold">Title</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary text-bg-primary" role="alert">
+                            <h6 class="fw-bold">Primary</h6>
+                            <span class="lg-text-medium">This is a primary alert.</span>
+                        </div>
+                        <div class="alert alert-secondary text-bg-secondary" role="alert">
+                            <h6 class="fw-bold">Secondary</h6>
+                            <span class="lg-text-medium">This is a secondary alert.</span>
+                        </div>
+                        <div class="alert alert-success text-bg-success" role="alert">
+                            <h6 class="fw-bold">Success</h6>
+                            <span class="lg-text-medium">This is a success alert.</span>
+                        </div>
+                        <div class="alert alert-danger text-bg-danger" role="alert">
+                            <h6 class="fw-bold">Danger</h6>
+                            <span class="lg-text-medium">This is a danger alert.</span>
+                        </div>
+                        <div class="alert alert-warning text-bg-warning" role="alert">
+                            <h6 class="fw-bold">Warning</h6>
+                            <span class="lg-text-medium">This is a warning alert.</span>
+                        </div>
+                        <div class="alert alert-info text-bg-info" role="alert">
+                            <h6 class="fw-bold">Info</h6>
+                            <span class="lg-text-medium">This is a info alert.</span>
+                        </div>
+                        <div class="alert alert-light text-bg-light" role="alert">
+                            <h6 class="fw-bold">Light</h6>
+                            <span class="lg-text-medium">This is a light alert.</span>
+                        </div>
+                        <div class="alert alert-dark text-bg-dark" role="alert">
+                            <h6 class="fw-bold">Dark</h6>
+                            <span class="lg-text-medium">This is a dark alert.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="fw-bold">Dismissing</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-light alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="float-start">
+            Copyright &copy; 2022 <div class="bullet"></div> Design with ❤️ By <a
+                href="https://designwitharifin.netlify.app/">designwitharifin</a>
+        </div>
+        <div class="float-end">
+            v1.0.0
+        </div>
+    </footer>
+    <!-- General JS Scripts -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Template JS FIle -->
+    <script src="/node_modules/bootstrap/dist/js/main.js"></script>
+
+    <!-- Js Libraries -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script>
+        // Collapse sidebar accordion container components 
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-components').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-components').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-utilities').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-utilities').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-pages').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-pages').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

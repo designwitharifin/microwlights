@@ -1,0 +1,97 @@
+// Include any default variable overrides here (though functions won't be available)
+$primary-50: #E7E2FF;
+$primary-100: #E4DEFF;
+$primary-200: #B4A3F9;
+$primary-300: #886CFF;
+$primary-400: #624AFF;
+$primary-500: #551CFF;
+$primary-600: #4518F9;
+$primary-700: #3B14DA;
+$primary-800: #3411C0;
+$primary-900: #2D129B;
+
+$secondary-50: #F7FAFC;
+$secondary-100: #EDF2F7;
+$secondary-200: #E2E8F0;
+$secondary-300: #CBD5E0;
+$secondary-400: #A0AEC0;
+$secondary-500: #718096;
+$secondary-600: #4A5568;
+$secondary-700: #1F2733;
+$secondary-800: #1A202C;
+$secondary-900: #171923;
+
+$success-50: #f0fdf4;
+$success-100: #dcfce7;
+$success-200: #bbf7d0;
+$success-300: #86efac;
+$success-400: #4ade80;
+$success-500: #22c55e;
+$success-600: #16a34a;
+$success-700: #15803d;
+$success-800: #166534;
+$success-900: #14532d;
+
+$danger-50: #FFF5F5;
+$danger-100: #FED7D7;
+$danger-200: #FED7D7;
+$danger-300: #FC8181;
+$danger-400: #F56565;
+$danger-500: #E53E3E;
+$danger-600: #C53030;
+$danger-700: #9B2C2C;
+$danger-800: #822727;
+$danger-900: #63171B;
+
+$warning-50: #FFFFF0;
+$warning-100: #FEFCBF;
+$warning-200: #FAF089;
+$warning-300: #F6E05E;
+$warning-400: #FACC15;
+$warning-500: #EAB308;
+$warning-600: #CA8A04;
+$warning-700: #A16207;
+$warning-800: #854D0E;
+$warning-900: #713F12;
+
+$info-50: #EBF8FF;
+$info-100: #BEE3F8;
+$info-200: #90CDF4;
+$info-300: #63B2EC;
+$info-400: #4299E1;
+$info-500: #3182CE;
+$info-600: #2B6CB0;
+$info-700: #2C5282;
+$info-800: #2A4365;
+$info-900: #1A365D;
+
+
+// scss-docs-start theme-color-variables
+$primary: $primary-500  !default;
+$secondary: $secondary-500  !default;
+$success: $success-500  !default;
+$info: $info-500  !default;
+$warning: $warning-500  !default;
+$danger: $danger-500  !default;
+$light: $secondary-100  !default;
+$dark: $secondary-900  !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark) !default;
+// scss-docs-end theme-colors-map
+
+$component-active-bg: $primary-500  !default;
+
+@import"node_modules/bootstrap/scss/bootstrap";
+
+
+// Then add additional custom code here

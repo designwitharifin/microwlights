@@ -1,0 +1,12 @@
+@import url('../css/microlight.css');
+
+body {
+    background-color: var(--secondary-50);
+    background-image: url('/assets/img/background/auth-background/bubble-glass.svg');
+    background-size: 997px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microlight &mdash; Charts</title>
+    <!-- Icon Microlight -->
+    <link rel="shortcut icon" href="/assets/img/brand/icon.svg" type="image/x-icon">
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="/main.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/css/microlight.css">
+
+    <!-- CSS Libraries -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body id="body-pd">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header__toggle text-primary-500">
+            <i class="bi bi-list" id="header-toggle"></i>
+        </div>
+
+        <div class="header__content">
+            <!-- Search button -->
+            <button type="button" class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3"
+                data-bs-toggle="modal" data-bs-target="#modalSearch">
+                <i class='bx bx-search'></i>
+            </button>
+            <!-- Notification button-->
+            <button type="button" class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3"
+                id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                <i class='bx bx-notification'></i>
+            </button>
+            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="dropdownMenuOffset">
+                <div class="card">
+                    <div class="card-header border-0 bg-transparent">
+                        <div class="float-start pe-5">
+                            <h6 class="fw-bold">Notifications</h6>
+                        </div>
+                        <div class="float-end">
+                            <a href="#" class="md-text-rg ps-5 text-secondary-500"> Mark all read</a>
+                        </div>
+                    </div>
+                    <div class="card-body notif">
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-code-slash icon-card-notification left text-white text-bg-primary-50 text-primary-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Template update is
+                                    available
+                                    now!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">17 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-emoji-smile icon-card-notification left text-white text-bg-warning-100 text-warning-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Welcome to Microlight
+                                    template!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">Yesterday</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <i
+                                    class="bi bi-hdd icon-card-notification left text-white text-bg-danger-100 text-danger-500"></i>
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3">Low disk space. Let's
+                                    clean it!</a>
+                                <p class="sm-text-rg text-secondary-500 ps-3">18 Hours Ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-0">
+                        <a href="#" class="md-text-rg"> View all</a>
+                    </div>
+                </div>
+            </ul>
+            <!-- Messages button -->
+            <button class="btn btn-outline-secondary-300 btn-circle btn-circle-sm me-3" id="dropdownMenuOffsetNew"
+                data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="20,20">
+                <i class='bx bx-message-square-detail'></i>
+            </button>
+            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="dropdownMenuOffsetNew">
+                <div class="card">
+                    <div class="card-header border-0 bg-transparent">
+                        <div class="float-start pe-5">
+                            <h6 class="fw-bold">Messages</h6>
+                        </div>
+                        <div class="float-end">
+                            <a href="#" class="md-text-rg ps-5 text-secondary-500"> Mark all as read</a>
+                        </div>
+                    </div>
+                    <div class="card-body notif">
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <img src="/assets/img/avatar/avatar-boy.png" alt="avatar" class="w-100">
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3 mb-5">Jhon doe</a><br>
+                                <span class="ps-3">Helo bro, how are you today ? 😊</span>
+                                <p class="sm-text-rg text-secondary-500 ps-3">17 Hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="float-start">
+                                <img src="/assets/img/avatar/avatar-girl.png" alt="avatar" class="w-100">
+                            </div>
+                            <div class="description-notification float-end">
+                                <a href="#" class="md-text-md fw-bold text-secondary-700 ps-3 mb-5">Elfira</a><br>
+                                <span class="ps-3">Hey baby ❤️</span>
+                                <p class="sm-text-rg text-secondary-500 ps-3">12 Hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center bg-transparent border-0">
+                        <a href="#" class="md-text-rg"> View all</a>
+                    </div>
+                </div>
+            </ul>
+            <!-- Profile link -->
+            <a href="#" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                <img src="/assets/img/avatar/avatar-2.jpg" alt="avatar">
+                <ul class="dropdown-menu border-0 shadow-lg rounded ps-2 pe-5" aria-labelledby="dropdownProfile">
+                    <li>
+                        <span class="dropdown-header fw-bold">👋 Hey, Fin</span>
+                    </li>
+                    <li class="align-middle">
+                        <a class="dropdown-item" href="/account/profile.html"> Profil</a>
+                    </li>
+                    <li class="align-middle">
+                        <a class="dropdown-item" href="/account/activities.html">Activities</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/account/settings.html"> Setting</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-danger fw-bold" href="/pages/login.html">Logout</a>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <div class="l-navbar bg-sidenav-primary-fill" id="nav-bar">
+        <nav class="nav nav-content">
+            <div>
+                <!-- Brand here -->
+                <a href="/" class="nav__logo">
+                    <img src="/assets/img/brand/logo-light.svg" alt="brand" class="nav__logo-icon">
+                </a>
+
+                <div class="nav__list">
+
+                    <a href="/" class="nav__link">
+                        <i class='bx bx-grid-alt nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Dashboard</span>
+                    </a>
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-components" data-bs-toggle="collapse"
+                        data-bs-target="#flushComponents" aria-expanded="false" aria-controls="flushComponents">
+                        <i class='bx bx-layer nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Components</span>
+
+                    </a>
+                    <div id="flushComponents" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-components" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body modal-dialog-scrollable">
+                            <div class="d-flex flex-column" id="accordion-container-components">
+                                <span class="dropdown-header p-2 text-secondary-400">Custom components</span>
+                                <a href="/components/accordion.html" class="accordion-items p-2">Accordion</a>
+                                <a href="/components/alert.html" class="accordion-items p-2">Alert</a>
+                                <a href="/components/badge.html" class="accordion-items p-2">Badge</a>
+                                <a href="/components/breadcrumb.html" class="accordion-items p-2">Breadcrumb</a>
+                                <a href="/components/buttons.html" class="accordion-items p-2">Buttons</a>
+                                <a href="/components/card.html" class="accordion-items p-2">Card</a>
+                                <a href="/components/carousel.html" class="accordion-items p-2">Carousel</a>
+                                <a href="/components/collapse.html" class="accordion-items p-2">Collapse</a>
+                                <a href="/components/dropdown.html" class="accordion-items p-2">Dropdown</a>
+                                <a href="/components/form.html" class="accordion-items p-2">Form</a>
+                                <a href="/components/list-group.html" class="accordion-items p-2">List Group</a>
+                                <a href="/components/media-object.html" class="accordion-items p-2">Media Object</a>
+                                <a href="/components/modal.html" class="accordion-items p-2">Modal</a>
+                                <a href="/components/nav.html" class="accordion-items p-2">Nav</a>
+                                <a href="/components/navbar.html" class="accordion-items p-2">Navbar</a>
+                                <a href="/components/pagination.html" class="accordion-items p-2">Pagination</a>
+                                <a href="/components/popovers.html" class="accordion-items p-2">Popover</a>
+                                <a href="/components/progress.html" class="accordion-items p-2">Progress</a>
+                                <a href="/components/table.html" class="accordion-items p-2">Table</a>
+                                <a href="/components/toasts.html" class="accordion-items p-2">Toasts</a>
+                                <a href="/components/tooltips.html" class="accordion-items p-2">Tooltip</a>
+                                <a href="/components/typography.html" class="accordion-items p-2">Typography</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-utilities" data-bs-toggle="collapse"
+                        data-bs-target="#flushUtilities" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-wrench nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Utilities</span>
+
+                    </a>
+                    <div id="flushUtilities" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-utilities" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-utilities">
+                                <span class="dropdown-header p-2 text-secondary-400">Custom utilities</span>
+                                <a href="/utilities/color.html" class="accordion-items p-2">Color</a>
+                                <a href="/utilities/text.html" class="accordion-items p-2">Text</a>
+                                <a href="/utilities/border.html" class="accordion-items p-2">Border</a>
+                                <a href="/utilities/elevation.html" class="accordion-items p-2">Elevation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-pages" data-bs-toggle="collapse"
+                        data-bs-target="#flushPages" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-folder nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Pages</span>
+
+                    </a>
+                    <div id="flushPages" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-pages" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-pages">
+                                <span class="dropdown-header p-2 text-secondary-400">Auth screens</span>
+                                <a href="/pages/login.html" class="accordion-items p-2">Login</a>
+                                <a href="/pages/register.html" class="accordion-items p-2">Register</a>
+                                <a href="/pages/forgot-password.html" class="accordion-items p-2">Forgot password</a>
+                                <a href="/pages/reset-password.html" class="accordion-items p-2">Reset password</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Starter screens</span>
+                                <a href="/pages/blank.html" class="accordion-items p-2">Blank pages</a>
+                                <a href="/pages/layout-default.html" class="accordion-items p-2">Layout Default</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Errors screens</span>
+                                <a href="/pages/503.html" class="accordion-items p-2">503</a>
+                                <a href="/pages/403.html" class="accordion-items p-2">403</a>
+                                <a href="/pages/404.html" class="accordion-items p-2">404</a>
+                                <a href="/pages/500.html" class="accordion-items p-2">500</a>
+                                <span class="dropdown-header p-2 text-secondary-400">Form screens</span>
+                                <a href="/pages/editor.html" class="accordion-items p-2">Editor</a>
+                                <a href="/pages/validation.html" class="accordion-items p-2">Validation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <a href="/charts" class="nav__link active">
+                        <i class='bx bx-bar-chart-alt-2 nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Charts</span>
+                    </a>
+
+                    <!-- Nav Item - Pages Collapse Menu Start -->
+                    <a href="#" class="nav__link" id="flush-table" data-bs-toggle="collapse"
+                        data-bs-target="#flushTable" aria-expanded="false" aria-controls="flushUser">
+                        <i class='bx bx-table nav__icon bx-tada-hover'></i>
+                        <span class="nav__name dropdown-toggle float-end">Table</span>
+                    </a>
+                    <div id="flushTable" class="nav__item accordion-collapse collapse ms-3"
+                        aria-labelledby="flush-table" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column" id="accordion-container-table">
+                                <span class="dropdown-header p-2 text-secondary-400">Table screens</span>
+                                <a href="/table" class="accordion-items p-2 active">Data table</a>
+                                <a href="/table/custom-table.html" class="accordion-items p-2">Custom table</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav Item - Pages Collapse Menu End -->
+
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-log-out nav__icon bx-tada-hover'></i>
+                        <span class="nav__name">Log Out</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Container wrapper -->
+    <div class="main-content">
+        <!-- Search -->
+        <div class="modal fade modal-search" id="modalSearch" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-xxl-down">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <input type="text" placeholder="Search here" class="center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start content here -->
+        <div class="header__page d-flex align-items-left align-items-md-center flex-column flex-md-row pt-5 mb-4 mt-5">
+            <div>
+                <h2 class="fw-bold">Charts Page</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb sm-text-rg">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item">Chrats page</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div id="wrapper">
+
+            <div class="content-area">
+                <div class="main">
+                    <div class="row sparkboxes mb-4">
+                        <div class="col-md-4">
+                            <div class="box box1 mb-4">
+                                <div id="spark1"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box box2 mb-4">
+                                <div id="spark2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box box3 mb-4">
+                                <div id="spark3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box mb-4">
+                                <div id="bar"> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box mb-4">
+
+                                <div id="donut"> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box mb-4">
+                                <div id="area"> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box mb-4">
+                                <div id="line"> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="float-start">
+            Copyright &copy; 2022 <div class="bullet"></div> Design with ❤️ By <a
+                href="https://designwitharifin.netlify.app/">designwitharifin</a>
+        </div>
+        <div class="float-end">
+            v1.0.0
+        </div>
+    </footer>
+    <!-- General JS Scripts -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Template JS FIle -->
+    <script src="/node_modules/bootstrap/dist/js/main.js"></script>
+
+    <!-- Js Libraries -->
+    <script src="/assets/js/apexchrats.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        var data = { "prices": [7114.25, 7126.6, 7116.95, 7203.7, 7233.75, 7451.0, 7381.15, 7348.95, 7347.75, 7311.25, 7266.4, 7253.25, 7215.45, 7266.35, 7315.25, 7237.2, 7191.4, 7238.95, 7222.6, 7217.9, 7359.3, 7371.55, 7371.15, 7469.2, 7429.25, 7434.65, 7451.1, 7475.25, 7566.25, 7556.8, 7525.55, 7555.45, 7560.9, 7490.7, 7527.6, 7551.9, 7514.85, 7577.95, 7592.3, 7621.95, 7707.95, 7859.1, 7815.7, 7739.0, 7778.7, 7839.45, 7756.45, 7669.2, 7580.45, 7452.85, 7617.25, 7701.6, 7606.8, 7620.05, 7513.85, 7498.45, 7575.45, 7601.95, 7589.1, 7525.85, 7569.5, 7702.5, 7812.7, 7803.75, 7816.3, 7851.15, 7912.2, 7972.8, 8145.0, 8161.1, 8121.05, 8071.25, 8088.2, 8154.45, 8148.3, 8122.05, 8132.65, 8074.55, 7952.8, 7885.55, 7733.9, 7897.15, 7973.15, 7888.5, 7842.8, 7838.4, 7909.85, 7892.75, 7897.75, 7820.05, 7904.4, 7872.2, 7847.5, 7849.55, 7789.6, 7736.35, 7819.4, 7875.35, 7871.8, 8076.5, 8114.8, 8193.55, 8217.1, 8235.05, 8215.3, 8216.4, 8301.55, 8235.25, 8229.75, 8201.95, 8164.95, 8107.85, 8128.0, 8122.9, 8165.5, 8340.7, 8423.7, 8423.5, 8514.3, 8481.85, 8487.7, 8506.9, 8626.2], "dates": ["02 Jun 2017", "05 Jun 2017", "06 Jun 2017", "07 Jun 2017", "08 Jun 2017", "09 Jun 2017", "12 Jun 2017", "13 Jun 2017", "14 Jun 2017", "15 Jun 2017", "16 Jun 2017", "19 Jun 2017", "20 Jun 2017", "21 Jun 2017", "22 Jun 2017", "23 Jun 2017", "27 Jun 2017", "28 Jun 2017", "29 Jun 2017", "30 Jun 2017", "03 Jul 2017", "04 Jul 2017", "05 Jul 2017", "06 Jul 2017", "07 Jul 2017", "10 Jul 2017", "11 Jul 2017", "12 Jul 2017", "13 Jul 2017", "14 Jul 2017", "17 Jul 2017", "18 Jul 2017", "19 Jul 2017", "20 Jul 2017", "21 Jul 2017", "24 Jul 2017", "25 Jul 2017", "26 Jul 2017", "27 Jul 2017", "28 Jul 2017", "31 Jul 2017", "01 Aug 2017", "02 Aug 2017", "03 Aug 2017", "04 Aug 2017", "07 Aug 2017", "08 Aug 2017", "09 Aug 2017", "10 Aug 2017", "11 Aug 2017", "14 Aug 2017", "16 Aug 2017", "17 Aug 2017", "18 Aug 2017", "21 Aug 2017", "22 Aug 2017", "23 Aug 2017", "24 Aug 2017", "28 Aug 2017", "29 Aug 2017", "30 Aug 2017", "31 Aug 2017", "01 Sep 2017", "04 Sep 2017", "05 Sep 2017", "06 Sep 2017", "07 Sep 2017", "08 Sep 2017", "11 Sep 2017", "12 Sep 2017", "13 Sep 2017", "14 Sep 2017", "15 Sep 2017", "18 Sep 2017", "19 Sep 2017", "20 Sep 2017", "21 Sep 2017", "22 Sep 2017", "25 Sep 2017", "26 Sep 2017", "27 Sep 2017", "28 Sep 2017", "29 Sep 2017", "03 Oct 2017", "04 Oct 2017", "05 Oct 2017", "06 Oct 2017", "09 Oct 2017", "10 Oct 2017", "11 Oct 2017", "12 Oct 2017", "13 Oct 2017", "16 Oct 2017", "17 Oct 2017", "18 Oct 2017", "19 Oct 2017", "23 Oct 2017", "24 Oct 2017", "25 Oct 2017", "26 Oct 2017", "27 Oct 2017", "30 Oct 2017", "31 Oct 2017", "01 Nov 2017", "02 Nov 2017", "03 Nov 2017", "06 Nov 2017", "07 Nov 2017", "08 Nov 2017", "09 Nov 2017", "10 Nov 2017", "13 Nov 2017", "14 Nov 2017", "15 Nov 2017", "16 Nov 2017", "17 Nov 2017", "20 Nov 2017", "21 Nov 2017", "22 Nov 2017", "23 Nov 2017", "24 Nov 2017", "27 Nov 2017", "28 Nov 2017"] }
+
+
+        var monthDataSeries1 = {
+            "prices": [8107.85, 8128.0, 8122.9, 8165.5, 8340.7, 8423.7, 8423.5, 8514.3, 8481.85, 8487.7, 8506.9, 8626.2, 8668.95, 8602.3, 8607.55, 8512.9, 8496.25, 8600.65, 8881.1, 9340.85],
+            "dates": ["13 Nov 2017", "14 Nov 2017", "15 Nov 2017", "16 Nov 2017", "17 Nov 2017", "20 Nov 2017", "21 Nov 2017", "22 Nov 2017", "23 Nov 2017", "24 Nov 2017", "27 Nov 2017", "28 Nov 2017", "29 Nov 2017", "30 Nov 2017", "01 Dec 2017", "04 Dec 2017", "05 Dec 2017", "06 Dec 2017", "07 Dec 2017", "08 Dec 2017"]
+        }
+
+        var monthDataSeries2 = {
+            "prices": [8423.7, 8423.5, 8514.3, 8481.85, 8487.7, 8506.9, 8626.2, 8668.95, 8602.3, 8607.55, 8512.9, 8496.25, 8600.65, 8881.1, 9040.85, 8340.7, 8165.5, 8122.9, 8107.85, 8128.0]
+        }
+
+        Apex.grid = {
+            padding: {
+                right: 0,
+                left: 0
+            }
+        }
+
+        Apex.dataLabels = {
+            enabled: false
+        }
+
+        var randomizeArray = function (arg) {
+            var array = arg.slice();
+            var currentIndex = array.length, temporaryValue, randomIndex;
+
+            while (0 !== currentIndex) {
+
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        // data for the sparklines that appear below header area
+        var sparklineData = [47, 45, 54, 38, 56, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46];
+
+        // the default colorPalette for this dashboard
+        //var colorPalette = ['#01BFD6', '#5564BE', '#F7A600', '#EDCD24', '#F74F58'];
+        var colorPalette = ['#FACC15', '#551CFF', '#4ADE80', '#FD4141', '#4299E1']
+
+        var spark1 = {
+            chart: {
+                id: 'sparkline1',
+                group: 'sparklines',
+                type: 'area',
+                height: 160,
+                sparkline: {
+                    enabled: true
+                },
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            fill: {
+                opacity: 1,
+            },
+            series: [{
+                name: 'Sales',
+                data: randomizeArray(sparklineData)
+            }],
+            labels: [...Array(24).keys()].map(n => `2022-09-0${n + 1}`),
+            yaxis: {
+                min: 0
+            },
+            xaxis: {
+                type: 'datetime',
+            },
+            colors: ['#4ADE80'],
+            title: {
+                text: '$424,652',
+                offsetX: 30,
+                style: {
+                    fontSize: '24px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            },
+            subtitle: {
+                text: 'Sales',
+                offsetX: 30,
+                style: {
+                    fontSize: '14px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            }
+        }
+
+        var spark2 = {
+            chart: {
+                id: 'sparkline2',
+                group: 'sparklines',
+                type: 'area',
+                height: 160,
+                sparkline: {
+                    enabled: true
+                },
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            fill: {
+                opacity: 1,
+            },
+            series: [{
+                name: 'Expenses',
+                data: randomizeArray(sparklineData)
+            }],
+            labels: [...Array(24).keys()].map(n => `2022-05-0${n + 1}`),
+            yaxis: {
+                min: 0
+            },
+            xaxis: {
+                type: 'datetime',
+            },
+            colors: ['#FACC15'],
+            title: {
+                text: '$235,312',
+                offsetX: 30,
+                style: {
+                    fontSize: '24px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            },
+            subtitle: {
+                text: 'Expenses',
+                offsetX: 30,
+                style: {
+                    fontSize: '14px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            }
+        }
+
+        var spark3 = {
+            chart: {
+                id: 'sparkline3',
+                group: 'sparklines',
+                type: 'area',
+                height: 160,
+                sparkline: {
+                    enabled: true
+                },
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            fill: {
+                opacity: 1,
+            },
+            series: [{
+                name: 'Profits',
+                data: randomizeArray(sparklineData)
+            }],
+            labels: [...Array(24).keys()].map(n => `2022-08-0${n + 1}`),
+            xaxis: {
+                type: 'datetime',
+            },
+            yaxis: {
+                min: 0
+            },
+            // colors: ['#008FFB'],
+            colors: ['#551CFF'],
+            title: {
+                text: '$135,965',
+                offsetX: 30,
+                style: {
+                    fontSize: '24px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            },
+            subtitle: {
+                text: 'Profits',
+                offsetX: 30,
+                style: {
+                    fontSize: '14px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            }
+        }
+
+        var monthlyEarningsOpt = {
+            chart: {
+                type: 'area',
+                height: 260,
+                background: '#eff4f7',
+                sparkline: {
+                    enabled: true
+                },
+                offsetY: 20
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            fill: {
+                type: 'solid',
+                opacity: 1,
+            },
+            series: [{
+                data: randomizeArray(sparklineData)
+            }],
+            xaxis: {
+                crosshairs: {
+                    width: 1
+                },
+            },
+            yaxis: {
+                min: 0,
+                max: 130
+            },
+            colors: ['#dce6ec'],
+
+            title: {
+                text: 'Total Earned',
+                offsetX: -30,
+                offsetY: 100,
+                align: 'right',
+                style: {
+                    color: '#7c939f',
+                    fontSize: '16px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            },
+            subtitle: {
+                text: '$135,965',
+                offsetX: -30,
+                offsetY: 100,
+                align: 'right',
+                style: {
+                    color: '#7c939f',
+                    fontSize: '24px',
+                    cssClass: 'apexcharts-yaxis-title'
+                }
+            }
+        }
+
+
+        new ApexCharts(document.querySelector("#spark1"), spark1).render();
+        new ApexCharts(document.querySelector("#spark2"), spark2).render();
+        new ApexCharts(document.querySelector("#spark3"), spark3).render();
+
+        var monthlyEarningsChart = new ApexCharts(document.querySelector("#monthly-earnings-chart"), monthlyEarningsOpt);
+
+
+        var optionsArea = {
+            chart: {
+                height: 340,
+                type: 'area',
+                zoom: {
+                    enabled: false
+                },
+            },
+            stroke: {
+                curve: 'straight'
+            },
+            colors: colorPalette,
+            series: [
+                {
+                    name: "Blog",
+                    data: [{
+                        x: 0,
+                        y: 0
+                    }, {
+                        x: 4,
+                        y: 5
+                    }, {
+                        x: 5,
+                        y: 3
+                    }, {
+                        x: 9,
+                        y: 8
+                    }, {
+                        x: 14,
+                        y: 4
+                    }, {
+                        x: 18,
+                        y: 5
+                    }, {
+                        x: 25,
+                        y: 0
+                    }]
+                },
+                {
+                    name: "Social Media",
+                    data: [{
+                        x: 0,
+                        y: 0
+                    }, {
+                        x: 4,
+                        y: 6
+                    }, {
+                        x: 5,
+                        y: 4
+                    }, {
+                        x: 14,
+                        y: 8
+                    }, {
+                        x: 18,
+                        y: 5.5
+                    }, {
+                        x: 21,
+                        y: 6
+                    }, {
+                        x: 25,
+                        y: 0
+                    }]
+                },
+                {
+                    name: "External",
+                    data: [{
+                        x: 0,
+                        y: 0
+                    }, {
+                        x: 2,
+                        y: 5
+                    }, {
+                        x: 5,
+                        y: 4
+                    }, {
+                        x: 10,
+                        y: 11
+                    }, {
+                        x: 14,
+                        y: 4
+                    }, {
+                        x: 18,
+                        y: 8
+                    }, {
+                        x: 25,
+                        y: 0
+                    }]
+                }
+            ],
+            fill: {
+                opacity: 1,
+            },
+            title: {
+                text: 'Daily Visits Insights',
+                align: 'left',
+                style: {
+                    fontSize: '18px'
+                }
+            },
+            markers: {
+                size: 0,
+                style: 'hollow',
+                hover: {
+                    opacity: 5,
+                }
+            },
+            tooltip: {
+                intersect: true,
+                shared: false,
+            },
+            xaxis: {
+                tooltip: {
+                    enabled: false
+                },
+                labels: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                }
+            },
+            yaxis: {
+                tickAmount: 4,
+                max: 12,
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                labels: {
+                    style: {
+                        color: '#78909c'
+                    }
+                }
+            },
+            legend: {
+                show: false
+            }
+        }
+
+        var chartArea = new ApexCharts(document.querySelector('#area'), optionsArea);
+        chartArea.render();
+
+        var optionsBar = {
+            chart: {
+                type: 'bar',
+                height: 380,
+                width: '100%',
+                stacked: true,
+            },
+
+            plotOptions: {
+                bar: {
+                    columnWidth: '45%',
+                    borderRadius: 5,
+                }
+            },
+            colors: colorPalette,
+            series: [{
+                name: "Clothing",
+                data: [42, 52, 16, 55, 59, 51, 45, 32, 26, 33, 44, 51, 42, 56],
+            }, {
+                name: "Food Products",
+                data: [6, 12, 4, 7, 5, 3, 6, 4, 3, 3, 5, 6, 7, 4],
+            }],
+            labels: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+            xaxis: {
+                labels: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+            },
+            yaxis: {
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                labels: {
+                    style: {
+                        color: '#78909c'
+                    }
+                }
+            },
+            title: {
+                text: 'Monthly Sales',
+                align: 'left',
+                style: {
+                    fontSize: '18px'
+                }
+            }
+
+        }
+
+        var chartBar = new ApexCharts(document.querySelector('#bar'), optionsBar);
+        chartBar.render();
+
+
+        var optionDonut = {
+            chart: {
+                type: 'donut',
+                width: '100%'
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        size: '75%',
+                    },
+                    offsetY: 20,
+                },
+                stroke: {
+                    colors: undefined
+                }
+            },
+            colors: colorPalette,
+            title: {
+                text: 'Department Sales',
+                style: {
+                    fontSize: '18px'
+                }
+            },
+            series: [21, 23, 19, 14, 6],
+            labels: ['Clothing', 'Food Products', 'Electronics', 'Kitchen Utility', 'Gardening'],
+            legend: {
+                position: 'left',
+                offsetY: 80
+            }
+        }
+
+        var donut = new ApexCharts(
+            document.querySelector("#donut"),
+            optionDonut
+        )
+        donut.render();
+
+
+        function trigoSeries(cnt, strength) {
+            var data = [];
+            for (var i = 0; i < cnt; i++) {
+                data.push((Math.sin(i / strength) * (i / strength) + i / strength + 1) * (strength * 2));
+            }
+
+            return data;
+        }
+
+
+
+        var optionsLine = {
+            chart: {
+                height: 340,
+                type: 'line',
+                zoom: {
+                    enabled: false
+                }
+            },
+            plotOptions: {
+                stroke: {
+                    width: 4,
+                    curve: 'smooth'
+                },
+            },
+            colors: colorPalette,
+            series: [
+                {
+                    name: "Day Time",
+                    data: trigoSeries(52, 20)
+                },
+                {
+                    name: "Night Time",
+                    data: trigoSeries(52, 27)
+                },
+            ],
+            title: {
+                floating: false,
+                text: 'Customers',
+                align: 'left',
+                style: {
+                    fontSize: '18px'
+                }
+            },
+            subtitle: {
+                text: '168,215',
+                align: 'center',
+                margin: 30,
+                offsetY: 40,
+                style: {
+                    color: '#222',
+                    fontSize: '24px',
+                }
+            },
+            markers: {
+                size: 0
+            },
+
+            grid: {
+
+            },
+            xaxis: {
+                labels: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                tooltip: {
+                    enabled: false
+                }
+            },
+            yaxis: {
+                tickAmount: 2,
+                labels: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false,
+                },
+                axisTicks: {
+                    show: false
+                },
+                min: 0,
+            },
+            legend: {
+                position: 'top',
+                horizontalAlign: 'left',
+                offsetY: -20,
+                offsetX: -30
+            }
+
+        }
+
+        var chartLine = new ApexCharts(document.querySelector('#line'), optionsLine);
+
+        // a small hack to extend height in website sample dashboard
+        chartLine.render().then(function () {
+            var ifr = document.querySelector("#wrapper");
+            if (ifr.contentDocument) {
+                ifr.style.height = ifr.contentDocument.body.scrollHeight + 20 + 'px';
+            }
+        });
+
+
+        // on smaller screen, change the legends position for donut
+        var mobileDonut = function () {
+            if ($(window).width() < 768) {
+                donut.updateOptions({
+                    plotOptions: {
+                        pie: {
+                            offsetY: -15,
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }, false, false)
+            }
+            else {
+                donut.updateOptions({
+                    plotOptions: {
+                        pie: {
+                            offsetY: 20,
+                        }
+                    },
+                    legend: {
+                        position: 'left'
+                    }
+                }, false, false)
+            }
+        }
+
+        $(window).resize(function () {
+            mobileDonut()
+        })
+    </script>
+    <script>
+        // Collapse sidebar accordion container components 
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-components').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-components').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-utilities').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-utilities').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+
+        $(function () {
+            // This is where we define the accordion container's maximum height, and scrolling if the content overflows.
+            var containerOffset = $('#accordion-container-pages').offset(); // gets the container's origin coordinates
+            var containerHeight = ($(window).height() - containerOffset.top) - 400; //determines container's maximum height
+            $('#accordion-container-pages').css({ // sets container's maximum height & enables vertical scrolling for content overflow
+                'max-height': containerHeight,
+                'overflow-y': 'auto'
+            });
+        });
+    </script>
+
+</body>
+
+</html>
