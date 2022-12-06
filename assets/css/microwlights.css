@@ -380,7 +380,7 @@
     object-fit: cover;
 }
 
-.single-blog-outlight img {
+.single-blog-outline img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -2548,7 +2548,7 @@ section.settings .card-body a:hover {
 }
 
 .carousel-indicators [data-bs-target] span {
-    content: ’’;
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -2566,6 +2566,7 @@ section.settings .card-body a:hover {
 .carousel-caption p {
     font-size: 15px;
     font-weight: 300;
+    color: white;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
